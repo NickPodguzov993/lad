@@ -8,10 +8,7 @@ window.onload = function() {
 
 }
 
-/*Get random numbers
-Numbers must not be the same as each other
-(found this entire codeblock on the internet
-and adapted it, not gonna lie)*/
+
 function setNumber() {
     let random;
     getNum.splice(0, getNum.length);
@@ -32,11 +29,11 @@ function setNumber() {
     }
 }
 
-//Check user number
+
 function checkUserText() {
     var userText = document.getElementById("userText").value;
     var setText = document.getElementById("textArea");
-    //Check if userText is number
+
     for (var i = 0; i < userText.length; i++) {
         if (userText.charCodeAt(i) < 48 || userText.charCodeAt(i) > 57
             || userText.length != numLength) {
@@ -46,15 +43,16 @@ function checkUserText() {
         }
     }
 
-    //Check Bull,Cow,Try Again
-    var bull, cow;
+
+    let bull;
+    let cow;
 
     if (check) {
         bull = 0;
         cow = 0;
 
-        for (var i = 0; i < getNum.length; i++) {
-            for (var k = 0; k < userText.length; k++) {
+        for (let i = 0; i < getNum.length; i++) {
+            for (let k = 0; k < userText.length; k++) {
                 if ((getNum[i] == userText[k]) && (i == k)) {
                     bull++;
                 } else if ((getNum[i] == userText[k]) && (i != k)) {
@@ -76,13 +74,13 @@ function checkUserText() {
 
 }
 
-//change difficulty
+
 function difficulty() {
     numLength = document.getElementById("select").value;
     reload();
 }
 
-//restart game
+
 function reload() {
     setNumber();
     document.getElementById("textArea").innerHTML = "";
