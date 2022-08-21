@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Title Bulls</title>
+
+  <script type="text/javascript" src="bullsandcows.js"></script>
+
+</head>
+<body>
+<h2> Быки и Коровы</h2>
+<label for="userText">Введи число: </label>
+<input type="text" id="userText"/>
+<br />
+<button id="ch" onclick="checkUserText()">check</button>
+<button id="re" onclick="reload()">restart</button>
+Количество : <select id="select" onchange="difficulty()">
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+</select>
+<br />
+<textarea id="textArea" rows="20" cols="30"  ></textarea>
+</body>
+</html>
